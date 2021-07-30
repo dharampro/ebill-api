@@ -55,5 +55,6 @@
 		<module>service</module>
 		<module>controller</module>
 		<module>common</module>
+		<module>exception</module>
 	</modules>
 </project>

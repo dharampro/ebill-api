@@ -1,0 +1,15 @@
+package com.techendear.ebill.exception.constant;
+
+public enum ErrorGroup {
+
+	INTERNAL_SERVER_ERROR, 
+	BAD_REQUEST, 
+	NOT_FOUND,
+	PRECONDITION_FAILED,
+	CONFLICT,
+	UNAUTHORIZED, 
+	FORBIDDEN,
+	METHOD_NOT_ALLOWED, 
+	UNKNOWN_EXCEPTION, 
+	INVALID_ARGUMENT;
+}
