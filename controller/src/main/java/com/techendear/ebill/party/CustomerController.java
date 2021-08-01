@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.techendear.ebill.exception.ResourceMovedException;
 import com.techendear.ebill.exceptions.CustomerNotFoundException;
 
 @RestController
@@ -27,7 +28,7 @@ public class CustomerController {
 	@GetMapping("/{id}")
 	public ResponseEntity<?> getCustomerById(@PathVariable("id") Long id) throws CustomerNotFoundException, Exception {
 		return ResponseEntity.status(HttpStatus.ACCEPTED).header("api-path", "/api/v1/user/")
-				.body(this.customerService.getCustomerById(id).orElseThrow(() -> new CustomerNotFoundException(id)));
+				.body(this.customerService.getCustomerById(id).orElseThrow(() -> new ResourceMovedException("http://localhost:8080")));
 	}
 
 	@GetMapping
